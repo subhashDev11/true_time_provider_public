@@ -3,6 +3,9 @@
 > A secure and reliable time provider for Flutter apps.
 > Fetches accurate time from NTP servers, with Firebase and device time as fallbacks.
 
+<img width="1179" height="2556" alt="result2" src="https://github.com/user-attachments/assets/a1490c0d-51a3-429f-a946-cc90bb0c7ac0" />
+<img width="1179" height="2556" alt="result1" src="https://github.com/user-attachments/assets/bebfbe3d-91d0-4180-ae6a-49028b2df72e" />
+
 ---
 
 ## Table of Contents
