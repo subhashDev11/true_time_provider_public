@@ -1,0 +1,31 @@
+name: true_time_provider
+description: "A secure and reliable true time provider for Flutter apps."
+version: 1.0.2
+homepage:
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  cloud_firestore: ^6.0.1
+  firebase_core: ^4.1.0
+  firebase_core_web: ^3.1.0
+  flutter:
+    sdk: flutter
+  http: ^1.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+
+flutter:
+
+screenshots:
+  - description: 'Result of using NTP server.'
+    path: example/screenshots/result2.png
+
+  - description: 'Result of using Firestore cloud.'
+    path: example/screenshots/result1.png
