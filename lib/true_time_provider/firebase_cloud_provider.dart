@@ -14,12 +14,8 @@ class FirebaseCloudProvider {
   static FirebaseCloudProvider get instance => _instance;
 
   /// Initialize based on provider mode
-  Future<void> init({
-    required FirebaseOptions options,
-}) async {
-    _firebaseApp = await Firebase.initializeApp(
-      options: options,
-    );
+  Future<void> init({required FirebaseOptions options}) async {
+    _firebaseApp = await Firebase.initializeApp(options: options);
     _firebaseFirestore = FirebaseFirestore.instanceFor(app: _firebaseApp!);
   }
 

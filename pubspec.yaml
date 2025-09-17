@@ -1,6 +1,6 @@
 name: true_time_provider
 description: "A secure and reliable true time provider for Flutter apps."
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/subhashDev11/true_time_provider_public.git
 
 environment:

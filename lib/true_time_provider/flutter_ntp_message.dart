@@ -52,17 +52,19 @@ class _TrueTimeProviderMessage {
       _pollInterval = array[2];
       _precision = array[3];
 
-      _rootDelay = ((array[4] * 256) +
-          unsignedByteToShort(array[5]) +
-          (unsignedByteToShort(array[6]) / 256) +
-          (unsignedByteToShort(array[7]) / 65536))
-          .toInt();
+      _rootDelay =
+          ((array[4] * 256) +
+                  unsignedByteToShort(array[5]) +
+                  (unsignedByteToShort(array[6]) / 256) +
+                  (unsignedByteToShort(array[7]) / 65536))
+              .toInt();
 
-      _rootDispersion = ((unsignedByteToShort(array[8]) * 256) +
-          unsignedByteToShort(array[9]) +
-          (unsignedByteToShort(array[10]) / 256) +
-          (unsignedByteToShort(array[11]) / 65536))
-          .toInt();
+      _rootDispersion =
+          ((unsignedByteToShort(array[8]) * 256) +
+                  unsignedByteToShort(array[9]) +
+                  (unsignedByteToShort(array[10]) / 256) +
+                  (unsignedByteToShort(array[11]) / 65536))
+              .toInt();
 
       _referenceIdentifier[0] = array[12];
       _referenceIdentifier[1] = array[13];
@@ -322,14 +324,12 @@ class _TrueTimeProviderMessage {
     if (stratum == 0 || stratum == 1) {
       return ref.toString();
     }
-
     /// In NTP Version 3 secondary servers, this is the 32-bit IPv4
     /// address of the reference source.
     else if (version == 3) {
       return '${unsignedByteToShort(ref[0])}.${unsignedByteToShort(ref[1])}.'
           '${unsignedByteToShort(ref[2])}.${unsignedByteToShort(ref[3])}';
     }
-
     /// In NTP Version 4 secondary servers, this is the low order 32 bits
     /// of the latest transmit timestamp of the reference source.
     else if (version == 4) {
